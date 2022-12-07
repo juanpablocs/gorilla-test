@@ -7,6 +7,7 @@ export const HomeScreen: React.FC<any> = ({ navigation }) => {
     {
       title: 'Completed Tasks',
       data: [
+        { title: 'xx', key: 'xx', completed:true },
       ]
     },
     {
