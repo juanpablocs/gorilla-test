@@ -12,7 +12,6 @@ clone repository and install dependencies
 npm install
 ```
 
-
 ## run on ios
 
 ```
