@@ -15,5 +15,5 @@ export const ButtonStyled = Styled.TouchableOpacity`
 export const Text = Styled.Text`
   color: white;
   font-weight: 600;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat-Medium';
 `;
