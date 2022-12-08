@@ -23,3 +23,9 @@ export const TextStyled = Styled.Text`
 export const FormStyled = Styled.View`
   flex: 1;
 `;
+
+export const NotFoundStyled = Styled.View`
+  flex: 1;
+  alignItems: center;
+  justifyContent: center;
+`;

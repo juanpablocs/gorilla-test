@@ -1,16 +1,21 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { View, Alert } from 'react-native';
 import { Button, Container, FormStyled, InputControl } from '../components';
+import { addTodo } from '../store/action';
 
 export const NewTaskScreen = ({ navigation }) => {
   const [title, setTitle] = React.useState('');
+  const dispatch = useDispatch();
 
   const handlerSubmit = () => {
     if(title.length > 0) {
+      dispatch(addTodo({name:title, completed:false}))
       return navigation.goBack();
     }
-    Alert.alert("the title is required")
-  }
+    Alert.alert("the title is required");
+  };
+
   return (
     <Container>
       <FormStyled>

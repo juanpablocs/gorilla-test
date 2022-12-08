@@ -18,12 +18,13 @@ export const InputControl: React.FC<InputControlProps> = ({ label, iconName, typ
     <InputControlStyled>
       <Label>{label}</Label>
       {type === 'text' ?
-        <Input onChange={onChange} iconName={iconName} placeholder={placeholder} />
+        <Input onChange={onChange} iconName={iconName} placeholder={placeholder} placeholderTextColor="#9EA0A4"  />
         :
         <RNPickerSelect
           style={pickerSelectStyles}
           onValueChange={onChange as any}
           placeholder={{ label: placeholder, value: null, color: '#9EA0A4' }}
+          useNativeAndroidPickerStyle={false}
           items={selectOptions}
           /*@ts-ignore */
           Icon={() => <MaterialIcon size="large" color="#ccc" name='chevron-down' />}

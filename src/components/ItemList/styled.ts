@@ -13,4 +13,5 @@ export const TextStyled = Styled.Text`
   font-size: 14px;
   font-family: 'Montserrat-Medium';
   margin-left: 10px;
+  color: #777;
 `;

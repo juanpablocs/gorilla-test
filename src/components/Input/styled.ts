@@ -17,4 +17,5 @@ export const TextInputStyled = Styled.TextInput`
   border:0;
   font-size: 14px;
   font-family: 'Montserrat-Medium';
+  height: 44px;
 `;

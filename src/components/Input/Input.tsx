@@ -2,17 +2,19 @@ import { InputControlStyled, TextInputStyled } from "./styled";
 import { MaterialIcon } from ".."
 
 export interface InputProps {
-  onChange?: (value) => void;
+  onChange?: (value:string) => void;
   iconName?: string;
   placeholder: string;
+  placeholderTextColor?: string;
 }
 
-export const Input: React.FC<InputProps> = ({ onChange, iconName = null, placeholder }) => {
+export const Input: React.FC<InputProps> = ({ onChange, iconName = null, placeholder, placeholderTextColor }) => {
 
   return (
     <InputControlStyled>
       <TextInputStyled
         placeholder={placeholder}
+        placeholderTextColor={placeholderTextColor}
         onChangeText={onChange}
         underlineColorAndroid="transparent"
       />

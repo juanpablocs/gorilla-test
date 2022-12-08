@@ -1,16 +1,23 @@
-import React from "react"
-import { TouchableHighlight } from "react-native"
-import { MaterialIcon } from "../../components"
-import { ItemListStyled, TextStyled } from "./styled"
+import React from "react";
+import { useDispatch } from 'react-redux';
+import { TouchableHighlight } from "react-native";
+import { MaterialIcon } from "../../components";
+import { editTask } from "../../store/action";
+import { ItemListStyled, TextStyled } from "./styled";
 
-export const ItemList = ({ title, completed = false }) => {
-
+export const ItemList = ({ id, name, completed = false }) => {
+  const dispatch = useDispatch();
   const iconProps = completed ? { color: 'orange', name: 'checkbox-marked' } : { color: 'orange', name: 'checkbox-blank-outline' };
+
+  const handlerEditTask = () => {
+    dispatch(editTask({ id, completed: !completed }));
+  };
+
   return (
-    <TouchableHighlight>
+    <TouchableHighlight onPress={handlerEditTask}>
       <ItemListStyled>
         <MaterialIcon size="large" {...iconProps} />
-        <TextStyled>{title}</TextStyled>
+        <TextStyled>{name}</TextStyled>
       </ItemListStyled>
     </TouchableHighlight>
   )
