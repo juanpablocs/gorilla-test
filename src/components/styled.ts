@@ -19,3 +19,7 @@ export const TextStyled = Styled.Text`
     color: black;
   `}
 `;
+
+export const FormStyled = Styled.View`
+  flex: 1;
+`;
