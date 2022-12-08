@@ -1,12 +1,17 @@
 # Gorilla Test App
 
+tested with node version `v14.19.1`
+
+```
+nvm install 14.19.1
+```
+
 clone repository and install dependencies
 
 ```
-npm install --force
+npm install
 ```
 
-It is necessary to install the dependencies in a forced way, because this library (styled-components) is incompatible with the latest version of react.
 
 ## run on ios
 
